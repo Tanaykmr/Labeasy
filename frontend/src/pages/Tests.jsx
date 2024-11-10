@@ -12,7 +12,7 @@ const Tests = () => {
   const getTestsData = async () => {
     try {
       const response = await axios({
-        url: "http://localhost:3000/api/v1/tests/gettests",
+        url: "https://labeasy.onrender.com/api/v1/tests/gettests",
         method: "GET",
         headers: {
           "Content-Type": "application/json",
