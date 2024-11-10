@@ -33,7 +33,9 @@ export default function Navbar() {
         <div className="text-white text-xl font-bold mr-4" onClick={() => navigate('/')} style={{ cursor: 'pointer', fontFamily: 'Bank Gothic' }}>
           <img src={logo} alt="Logo" className="w-[12rem] " />
         </div>
-
+        {isLoggedIn && <div className="text-white text-xl font-bold mr-4" onClick={() => navigate('/')} style={{ cursor: 'pointer', fontFamily: 'Bank Gothic' }}>
+          {JSON.parse(localStorage.getItem("type")) == 'lab' ? JSON.parse(localStorage.getItem('lab_name')) : JSON.parse(localStorage.getItem('name'))}
+        </div>}
         {/* Search Bar */}
         <div className="w-1/2 mr-4 relative">
           <input
